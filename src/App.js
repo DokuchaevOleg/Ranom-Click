@@ -33,7 +33,10 @@ const App = () => {
 	};
 
 	return (
-		connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "friends,status"});
+		<View activePanel={activePanel} popout={popout}>
+			<Home id='home' fetchedUser={fetchedUser} go={go} />
+			<Persik id='persik' go={go} />
+		</View>
 	);
 }
 
