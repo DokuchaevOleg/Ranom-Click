@@ -8,7 +8,6 @@ import Home from './panels/Home';
 import Persik from './panels/Persik';
 
 const App = () => {
-    connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "friends,status"});
 	const [activePanel, setActivePanel] = useState('home');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
@@ -34,10 +33,7 @@ const App = () => {
 	};
 
 	return (
-		<View activePanel={activePanel} popout={popout}>
-			<Home id='home' fetchedUser={fetchedUser} go={go} />
-			<Persik id='persik' go={go} />
-		</View>
+		connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "friends,status"});
 	);
 }
 
