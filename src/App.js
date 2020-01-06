@@ -7,6 +7,8 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Home from './panels/Home';
 import Persik from './panels/Persik';
 
+connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "friends,status"});
+
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
 	const [fetchedUser, setUser] = useState(null);
