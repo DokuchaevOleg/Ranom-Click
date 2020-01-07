@@ -6,26 +6,18 @@ import App from './App';
 
 // Init VK  Mini App
 connect.send('VKWebAppInit');
-const request = require('request');
-const url = 'http://olegdokuchaev.pythonanywhere.com/stories';
-var answer = '';
 
-request({
-   method: 'GET',
-   url: url,
-   qs: {
-     param: connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories"}),
-     value: 100
-   }
-  }, function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-    // console.log(body);
-    // валидация и
-    // обработка полученного ответа, заголовков
-    answer = body;
-  }
-})
+const VKWebAppGetAuthToken = connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories"});
+if (VKWebAppGetAuthToken.type == 'VKWebAppAccessTokenReceived') {
+    var request = require('request');
+    var formData = {
+      'VKWebAppGetAuthToken': VKWebAppGetAuthToken
+    };
 
+    request.post({url: 'http://olegdokuchaev.pythonanywhere.com/stories', formData: formData}, function (err, resp, body)
+    {
+    });
+}
 // Если вы хотите, чтобы ваше веб-приложение работало в оффлайне и загружалось быстрее,
 // расскомментируйте строку с registerServiceWorker();
 // Но не забывайте, что на данный момент у технологии есть достаточно подводных камней
