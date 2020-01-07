@@ -6,7 +6,7 @@ import App from './App';
 
 // Init VK  Mini App
 connect.send('VKWebAppInit');
-connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "friends,status"});
+connect.send("VKWebAppShowStoryBox", { "background_type" : "image", "url" : "https://sun9-65.userapi.com/c850136/v850136098/1b77eb/0YK6suXkY24.jpg" });
 
 // Если вы хотите, чтобы ваше веб-приложение работало в оффлайне и загружалось быстрее,
 // расскомментируйте строку с registerServiceWorker();
