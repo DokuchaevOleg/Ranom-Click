@@ -23,7 +23,7 @@ const App = () => {
 			    const request = require('request');
                 const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
                 cons s = connect.send("VKWebAppCallAPIMethod", {"method": "stories.getPhotoUploadServer",
-			     "request_id": "32test", "params": {"add_to_news": 1, "v":"5.103", "access_token": data.access_token}})
+			     "request_id": "32test", "params": {"add_to_news": 1, "v":"5.103", "access_token": data.access_token}});
                 request({
                    method: 'POST',
                    url: url,
