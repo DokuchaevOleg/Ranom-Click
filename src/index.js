@@ -7,7 +7,6 @@ import App from './App';
 // Init VK  Mini App
 connect.send('VKWebAppInit');
 connect.send("VKWebAppAllowNotifications", {});
-connect.send("VKWebAppGetAuthToken", {"app_id": 7250000, "scope": "friends,status"});
 
 // Если вы хотите, чтобы ваше веб-приложение работало в оффлайне и загружалось быстрее,
 // расскомментируйте строку с registerServiceWorker();
