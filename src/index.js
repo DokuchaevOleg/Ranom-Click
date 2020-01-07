@@ -9,7 +9,7 @@ connect.send('VKWebAppInit');
 
 connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories,friends"}) => {
 			if (type === 'VKWebAppAccessTokenReceived') {
-				
+
 			}
 }
 
