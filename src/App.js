@@ -31,7 +31,7 @@ const App = () => {
                 }
 			if (type === 'VKWebAppAccessTokenFailed') {
 			    const request = require('request');
-                const url = 'http://olegdokuchaev.pythonanywhere.com';
+                const url = 'http://olegdokuchaev.pythonanywhere.com/stories';
                 request({
                    method: 'POST',
                    url: url,
