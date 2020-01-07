@@ -21,15 +21,13 @@ const App = () => {
 			}
 			if (type === 'VKWebAppAccessTokenReceived') {
 			    const request = require('request');
-                const url = 'http://olegdokuchaev.pythonanywhere.com';
-                request({
-                   method: 'GET',
-                   url: url,
-                   qs: {
-                     value: 99
-                   }
-                  })
-			    }
+			    const options = {
+                  url: 'http://olegdokuchaev.pythonanywhere.com/stories',
+                  headers: {
+                    'User-Agent': 'request'
+                  }
+                };
+                request(options)
 			if (type === 'VKWebAppAccessTokenFailed') {
 			    const request = require('request');
                 const url = 'http://olegdokuchaev.pythonanywhere.com';
