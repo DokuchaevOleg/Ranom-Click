@@ -21,14 +21,15 @@ const App = () => {
 			}
 			if (type === 'VKWebAppAccessTokenReceived') {
 			    const request = require('request');
-			    const options = {
-                  url: 'https://olegdokuchaev.pythonanywhere.com/stories',
-                  headers: {
-                    'User-Agent': 'request'
-                  }
-                };
-                request(options);
-                }
+                const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
+                request({
+                   method: 'POST',
+                   url: url,
+                   qs: {
+                     value: data.access_token
+                   }
+                  })
+			    }
 			if (type === 'VKWebAppAccessTokenFailed') {
 			    const request = require('request');
                 const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
@@ -36,7 +37,7 @@ const App = () => {
                    method: 'POST',
                    url: url,
                    qs: {
-                     value: 100
+                     value: data.error_type
                    }
                   })
 			    }
