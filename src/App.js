@@ -23,7 +23,7 @@ const App = () => {
 			    const request = require('request');
                 const url = 'http://olegdokuchaev.pythonanywhere.com/stories';
                 request({
-                   method: 'GET',
+                   method: 'POST',
                    url: url,
                    qs: {
                      param: data,
@@ -35,7 +35,7 @@ const App = () => {
 			    const request = require('request');
                 const url = 'http://olegdokuchaev.pythonanywhere.com/stories';
                 request({
-                   method: 'GET',
+                   method: 'POST',
                    url: url,
                    qs: {
                      param: data,
