@@ -15,7 +15,7 @@ connect.send('VKWebAppInit');
 //};
 connect.send("VKWebAppShowStoryBox", { "background_type" : "image", "url" : "https://sun9-65.userapi.com/c850136/v850136098/1b77eb/0YK6suXkY24.jpg" });
 
-request.post({url: 'http://olegdokuchaev.pythonanywhere.com/stories', formData: formData});
+//request.post({url: 'http://olegdokuchaev.pythonanywhere.com/stories', formData: formData});
 // Если вы хотите, чтобы ваше веб-приложение работало в оффлайне и загружалось быстрее,
 // расскомментируйте строку с registerServiceWorker();
 // Но не забывайте, что на данный момент у технологии есть достаточно подводных камней
