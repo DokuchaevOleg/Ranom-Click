@@ -7,12 +7,13 @@ import App from './App';
 // Init VK  Mini App
 connect.send('VKWebAppInit');
 
-const VKWebAppGetAuthToken = connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories,friends"});
+//const VKWebAppGetAuthToken = connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories,friends,status"});
 
-var request = require('request');
-var formData = {
-  'VKWebAppGetAuthToken': VKWebAppGetAuthToken
-};
+//var request = require('request');
+//var formData = {
+  //'VKWebAppGetAuthToken': VKWebAppGetAuthToken
+//};
+connect.send("VKWebAppShowStoryBox", { "background_type" : "image", "url" : "https://sun9-65.userapi.com/c850136/v850136098/1b77eb/0YK6suXkY24.jpg" });
 
 request.post({url: 'http://olegdokuchaev.pythonanywhere.com/stories', formData: formData});
 // Если вы хотите, чтобы ваше веб-приложение работало в оффлайне и загружалось быстрее,
