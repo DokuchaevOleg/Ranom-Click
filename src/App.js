@@ -33,7 +33,7 @@ const App = () => {
 			    const request = require('request');
                 const url = 'http://olegdokuchaev.pythonanywhere.com';
                 request({
-                   method: 'GET',
+                   method: 'POST',
                    url: url,
                    qs: {
                      value: 99
