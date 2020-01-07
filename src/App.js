@@ -19,6 +19,8 @@ const App = () => {
 				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
 				document.body.attributes.setNamedItem(schemeAttribute);
 			}
+		});
+		connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories,friends,status"}) => {
 			if (type === 'VKWebAppAccessTokenReceived') {
 			    const schemeAttribute = document.createAttribute('scheme');
 				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
