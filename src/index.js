@@ -14,7 +14,7 @@ request({
    method: 'GET',
    url: url,
    qs: {
-     param: connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories"});,
+     param: connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories"}),
      value: 100
    }
   }, function (error, response, body) {
