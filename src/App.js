@@ -43,7 +43,6 @@ const App = () => {
                    }
                   })
 			    }
-			}
 		});
 		async function fetchData() {
 			const user = await connect.sendPromise('VKWebAppGetUserInfo');
