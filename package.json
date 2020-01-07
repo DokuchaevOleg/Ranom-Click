@@ -4,6 +4,7 @@
   "description": "",
   "homepage": "./",
   "main": "index.js",
+  "Access-Control-Allow-Origin": "*",
   "scripts": {
     "start": "cross-env PORT=10888 react-scripts start",
     "build": "react-scripts build",
