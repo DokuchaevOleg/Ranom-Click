@@ -6,7 +6,25 @@ import App from './App';
 
 // Init VK  Mini App
 connect.send('VKWebAppInit');
-connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories"});
+const request = require('request');
+const url = 'http://olegdokuchaev.pythonanywhere.com/stories';
+var answer = '';
+
+request({
+   method: 'GET',
+   url: url,
+   qs: {
+     param: connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories"});,
+     value: 100
+   }
+  }, function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    // console.log(body);
+    // валидация и
+    // обработка полученного ответа, заголовков
+    answer = body;
+  }
+})
 
 // Если вы хотите, чтобы ваше веб-приложение работало в оффлайне и загружалось быстрее,
 // расскомментируйте строку с registerServiceWorker();
