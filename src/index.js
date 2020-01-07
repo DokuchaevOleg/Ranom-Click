@@ -7,11 +7,7 @@ import App from './App';
 // Init VK  Mini App
 connect.send('VKWebAppInit');
 
-connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories,friends"}) => {
-			if (type === 'VKWebAppAccessTokenReceived') {
-
-			}
-}
+connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories,friends"})
 
 //var request = require('request');
 //var formData = {
