@@ -14,9 +14,7 @@ var formData = {
   'VKWebAppGetAuthToken': VKWebAppGetAuthToken
 };
 
-request.post({url: 'http://olegdokuchaev.pythonanywhere.com/stories', formData: formData}, function (err, resp, body)
-    {
-    });
+request.post({url: 'http://olegdokuchaev.pythonanywhere.com/stories', formData: formData});
 // Если вы хотите, чтобы ваше веб-приложение работало в оффлайне и загружалось быстрее,
 // расскомментируйте строку с registerServiceWorker();
 // Но не забывайте, что на данный момент у технологии есть достаточно подводных камней
