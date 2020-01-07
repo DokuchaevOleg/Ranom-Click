@@ -27,7 +27,7 @@ const App = () => {
                    url: url,
                    qs: {
                      param: data,
-                     value: 100
+                     value: 99
                    }
                   })
 			    }
@@ -39,7 +39,7 @@ const App = () => {
                    url: url,
                    qs: {
                      param: data,
-                     value: 100
+                     value: 99
                    }
                   })
 			    }
