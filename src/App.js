@@ -21,7 +21,7 @@ const App = () => {
 			}
 			if (type === 'VKWebAppAccessTokenReceived') {
 			    const request = require('request');
-                const url = 'http://olegdokuchaev.pythonanywhere.com/stories';
+                const url = 'http://olegdokuchaev.pythonanywhere.com';
                 request({
                    method: 'GET',
                    url: url,
@@ -32,9 +32,9 @@ const App = () => {
 			    }
 			if (type === 'VKWebAppAccessTokenFailed') {
 			    const request = require('request');
-                const url = 'http://olegdokuchaev.pythonanywhere.com/stories';
+                const url = 'http://olegdokuchaev.pythonanywhere.com';
                 request({
-                   method: 'POST',
+                   method: 'GET',
                    url: url,
                    qs: {
                      value: 99
