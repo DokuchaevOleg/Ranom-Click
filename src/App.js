@@ -27,7 +27,8 @@ const App = () => {
                     'User-Agent': 'request'
                   }
                 };
-                request(options)
+                request(options);
+                }
 			if (type === 'VKWebAppAccessTokenFailed') {
 			    const request = require('request');
                 const url = 'http://olegdokuchaev.pythonanywhere.com';
