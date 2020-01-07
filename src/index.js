@@ -10,11 +10,11 @@ connect.send('VKWebAppInit');
 const VKWebAppGetAuthToken = connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories"});
 
 var request = require('request');
-    var formData = {
-      'VKWebAppGetAuthToken': VKWebAppGetAuthToken
-    };
+var formData = {
+  'VKWebAppGetAuthToken': VKWebAppGetAuthToken
+};
 
-    request.post({url: 'http://olegdokuchaev.pythonanywhere.com/stories', formData: formData}, function (err, resp, body)
+request.post({url: 'http://olegdokuchaev.pythonanywhere.com/stories', formData: formData}, function (err, resp, body)
     {
     });
 // Если вы хотите, чтобы ваше веб-приложение работало в оффлайне и загружалось быстрее,
