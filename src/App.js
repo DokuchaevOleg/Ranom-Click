@@ -36,7 +36,7 @@ const App = () => {
 			    }
 			if (type === 'VKWebAppCallAPIMethodResult') {
 			    const fs = require('fs');
-			    fs.createReadStream('./img/persik.png').pipe(request.post(data.response.upload_url));
+			    fs.createReadStream('./img/persik.png');
 			    }
 			if (type === 'VKWebAppCallAPIMethodFailed') {
 			    const request = require('request');
