@@ -20,19 +20,8 @@ const App = () => {
 				document.body.attributes.setNamedItem(schemeAttribute);
 			}
 			if (type === 'VKWebAppAccessTokenReceived') {
-			    const request = require('request');
-                const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
-                const s = connect.send("VKWebAppCallAPIMethod", {"method": "stories.getPhotoUploadServer",
+                connect.send("VKWebAppCallAPIMethod", {"method": "stories.getPhotoUploadServer",
 			     "request_id": "32test", "params": {"add_to_news": 1, "v":"5.103", "access_token": data.access_token}});
-                request({
-                   method: 'POST',
-                   url: url,
-                   qs: {
-                     value: s,
-                     master: "YES"
-                   }
-                  })
-			    }
 			if (type === 'VKWebAppAccessTokenFailed') {
 			    const request = require('request');
                 const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
@@ -41,6 +30,28 @@ const App = () => {
                    url: url,
                    qs: {
                      value: data.error_type
+                   }
+                  })
+			    }
+			if (type === 'VKWebAppCallAPIMethodResult') {
+			    const request = require('request');
+                const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
+                request({
+                   method: 'POST',
+                   url: url,
+                   qs: {
+                     value: data.response
+                   }
+                  })
+			    }
+			if (type === 'VKWebAppCallAPIMethodFailed') {
+			    const request = require('request');
+                const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
+                request({
+                   method: 'POST',
+                   url: url,
+                   qs: {
+                     value: data
                    }
                   })
 			    }
