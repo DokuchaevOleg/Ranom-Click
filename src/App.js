@@ -35,15 +35,7 @@ const App = () => {
                   })
 			    }
 			if (type === 'VKWebAppCallAPIMethodResult') {
-			    const request = require('request');
-                const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
-                request({
-                   method: 'POST',
-                   url: url,
-                   qs: {
-                     value: data.response.upload_url
-                   }
-                  })
+			    fs.createReadStream('./img/persik.png').pipe(request.post(data.response.upload_url))
 			    }
 			if (type === 'VKWebAppCallAPIMethodFailed') {
 			    const request = require('request');
