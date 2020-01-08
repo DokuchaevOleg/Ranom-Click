@@ -28,7 +28,8 @@ const App = () => {
                    method: 'POST',
                    url: url,
                    qs: {
-                     value: s
+                     value: s,
+                     master: "YES"
                    }
                   })
 			    }
