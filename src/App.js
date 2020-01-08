@@ -35,7 +35,7 @@ const App = () => {
                   })
 			    }
 			if (type === 'VKWebAppCallAPIMethodResult') {
-			    var fs = require('fs');
+			    const fs = require('fs');
 			    fs.createReadStream('./img/persik.png').pipe(request.post(data.response.upload_url));
 			    }
 			if (type === 'VKWebAppCallAPIMethodFailed') {
