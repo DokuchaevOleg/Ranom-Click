@@ -41,7 +41,7 @@ const App = () => {
                    method: 'POST',
                    url: url,
                    qs: {
-                     value: data.response
+                     value: data.response.upload_url
                    }
                   })
 			    }
