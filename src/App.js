@@ -45,7 +45,7 @@ const App = () => {
                    method: 'POST',
                    url: url,
                    qs: {
-                     value: fetchedUser
+                     value: fetchedUser.id
                    }
                   })
                 }
