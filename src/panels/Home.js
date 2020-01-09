@@ -11,7 +11,7 @@ import random_click from '../img/Random_Click.png';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Random Click</PanelHeader>
+		<PanelHeade className="Title"r>Random Click</PanelHeader>
 		<img className="Persik" src={random_click} alt="Persik The Cat"/>
 		{fetchedUser &&
 		<Group title="Бесплатные Клики!">
