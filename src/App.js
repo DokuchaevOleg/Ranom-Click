@@ -37,14 +37,13 @@ const App = () => {
                     const user = await connect.sendPromise('VKWebAppGetUserInfo');
                     }
 
-                fetchData();
 			    const request = require('request');
                 const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
                 request({
                    method: 'POST',
                    url: url,
                    qs: {
-                     value: user
+                     value: fetchData()
                    }
                   })
 			    }
