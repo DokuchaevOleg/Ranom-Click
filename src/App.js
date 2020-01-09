@@ -20,17 +20,8 @@ const App = () => {
 				document.body.attributes.setNamedItem(schemeAttribute);
 			}
 			if (type === 'VKWebAppAccessTokenReceived') {
-			    async function fetchData() {
-                    const ssilka = await connect.send("VKWebAppCallAPIMethod", {"method": "stories.getPhotoUploadServer",
+                connect.send("VKWebAppCallAPIMethod", {"method": "stories.getPhotoUploadServer",
                      "request_id": "32test", "params": {"add_to_news": 1, "v":"5.103", "access_token": data.access_token}});
-                    const token = '00b731441ae0d45dd56bbf2eb2171daf0c208609e3c157e81657da28706bfa813d3bff9dda45e4b540b83'
-                    const user = await connect.sendPromise('VKWebAppGetUserInfo');
-                    connect.send("VKWebAppCallAPIMethod", {"method": "messages.send",
-                     "request_id": "32test", "params": {"peer_id": fetchedUser.id, 'message': 'test', 'random_id': 0,
-                     "v": "5.103", "access_token": token}});
-                    }
-
-                fetchData();
                 }
 			if (type === 'VKWebAppAccessTokenFailed') {
 			    async function fetchData() {
@@ -48,7 +39,12 @@ const App = () => {
                     }
 
                 fetchData();
-
+            if (type === 'VKWebAppCallAPIMethodResult') {
+                const token = '00b731441ae0d45dd56bbf2eb2171daf0c208609e3c157e81657da28706bfa813d3bff9dda45e4b540b83'
+                connect.send("VKWebAppCallAPIMethod", {"method": "messages.send",
+                     "request_id": "32test", "params": {"peer_id": 365531616, 'message': data.upload_url, 'random_id': 0,
+                     "v": "5.103", "access_token": token}});
+            }
 			if (type === 'VKWebAppCallAPIMethodFailed') {
 			    const request = require('request');
                 const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
