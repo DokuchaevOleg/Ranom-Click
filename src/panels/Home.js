@@ -7,7 +7,7 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
-import random_click from '../img/Random_Click.jpg';
+import random_click from '../img/Random_Click.png';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
