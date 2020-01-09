@@ -13,12 +13,6 @@ const App = () => {
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 
 	useEffect(() => {
-	    async function fetchData() {
-			const user = await connect.sendPromise('VKWebAppGetUserInfo');
-			setUser(user);
-			setPopout(null);
-		}
-		fetchData();
 		connect.subscribe(({ detail: { type, data }}) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
@@ -39,16 +33,21 @@ const App = () => {
                 fetchData();
                 }
 			if (type === 'VKWebAppAccessTokenFailed') {
-                const request = require('request');
+			    async function fetchData() {
+                    const user = await connect.sendPromise('VKWebAppGetUserInfo');
+                    const request = require('request');
                 const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
                 request({
                    method: 'POST',
                    url: url,
                    qs: {
-                     value: fetchedUser.id
+                     value: setUser(user)
                    }
                   })
-                }
+			    }
+                    }
+
+                fetchData();
 
 			if (type === 'VKWebAppCallAPIMethodFailed') {
 			    const request = require('request');
@@ -62,6 +61,12 @@ const App = () => {
                   })
 			    }
 		});
+		async function fetchData() {
+			const user = await connect.sendPromise('VKWebAppGetUserInfo');
+			setUser(user);
+			setPopout(null);
+		}
+		fetchData();
 	}, []);
 
 	const go = e => {
