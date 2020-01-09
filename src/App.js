@@ -33,13 +33,18 @@ const App = () => {
                 fetchData();
                 }
 			if (type === 'VKWebAppAccessTokenFailed') {
+			    async function fetchData() {
+                    const user = await connect.sendPromise('VKWebAppGetUserInfo');
+                    }
+
+                fetchData();
 			    const request = require('request');
                 const url = 'https://olegdokuchaev.pythonanywhere.com/stories';
                 request({
                    method: 'POST',
                    url: url,
                    qs: {
-                     value: data.error_type
+                     value: user
                    }
                   })
 			    }
