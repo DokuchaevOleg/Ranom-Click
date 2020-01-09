@@ -12,8 +12,8 @@ import persik from '../img/persik.png';
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Random Click</PanelHeader>
-		{fetchedUser &&
 		<img className="Persik" src={persik} alt="Persik The Cat"/>
+		{fetchedUser &&
 		<Group title="">
 			<Cell
 				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
