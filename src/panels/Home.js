@@ -8,6 +8,7 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import random_click from '../img/Random_Click.png';
+const a = '123\n123'
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
@@ -17,8 +18,9 @@ const Home = ({ id, go, fetchedUser }) => (
 		<Group title="Бесплатные Клики!">
 		    <p class='text'>
 			{fetchedUser.first_name} {fetchedUser.last_name}, нажми <b>РАЗРЕШИТЬ</b> и получи до <b>2000 Кликов</b>!
-			Клики можно получать <b>каждые 24 часа</b>!\n
+			Клики можно получать <b>каждые 24 часа</b>!
 			Поторопись, скоро акция исчезнет!
+			{a}
 			</p>
 		</Group>}
 
