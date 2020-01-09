@@ -13,7 +13,7 @@ const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Example</PanelHeader>
 		{fetchedUser &&
-		<Group title="Random Click">
+		<Group title="">
 		    <img className="Persik" src={persik} alt="Persik The Cat"/>
 			<Cell
 				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
