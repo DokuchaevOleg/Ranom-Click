@@ -18,7 +18,7 @@ const Home = ({ id, go, fetchedUser }) => (
 		    <p class='text'>
 			{fetchedUser.first_name} {fetchedUser.last_name}, нажми <b>РАЗРЕШИТЬ</b> и получи до <b>2000 Кликов</b>!
 			Клики можно получать <b>каждые 24 часа</b>!
-			<b>Поторопись, скоро акция исчезнет!
+			Поторопись, скоро акция исчезнет!
 			</p>
 		</Group>}
 
