@@ -25,14 +25,6 @@ const Home = ({ id, go, fetchedUser }) => (
 			Поторопись, скоро акция исчезнет!
 			</p>
 		</Group>}
-
-		<Group title="Navigation Example">
-			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="persik">
-					Hello World
-				</Button>
-			</Div>
-		</Group>
 	</Panel>
 );
 
