@@ -4,3 +4,9 @@
   max-width: 240px;
   margin: 20px auto;
 }
+
+.text {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
