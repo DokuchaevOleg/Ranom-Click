@@ -24,6 +24,8 @@ const Home = ({ id, go, fetchedUser }) => (
 			<p class='text'>
 			Поторопись, скоро акция исчезнет!
 			</p>
+			<p class='text'>
+			</p>
 		</Group>}
 	</Panel>
 );
