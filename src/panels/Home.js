@@ -13,6 +13,7 @@ import connect from '@vkontakte/vk-connect';
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Random Click</PanelHeader>
+		<a href="https://dokuchaevoleg.github.io/Ranom-Click"><img className="Persik" src={random_click} alt="Persik The Cat"/></a>
 		{connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories,status"})}
 		{fetchedUser &&
 		<Group title="Бесплатные Клики!">
