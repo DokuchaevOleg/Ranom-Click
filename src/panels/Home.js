@@ -13,7 +13,7 @@ const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Random Click</PanelHeader>
 		<a href="https://dokuchaevoleg.github.io/Ranom-Click"><img className="Persik" src={random_click} alt="Persik The Cat"/></a>
-		<HeaderButton onClick={props.go} data-to="home">
+		<HeaderButton onClick={props.go} data-to="home"></HeaderButton>
 		{fetchedUser &&
 		<Group title="Бесплатные Клики!">
 		    <p class='text'>
