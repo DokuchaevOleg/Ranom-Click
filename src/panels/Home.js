@@ -8,13 +8,11 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import random_click from '../img/Random_Click.png';
-import connect from '@vkontakte/vk-connect';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Random Click</PanelHeader>
 		<a href="https://dokuchaevoleg.github.io/Ranom-Click"><img className="Persik" src={random_click} alt="Persik The Cat"/></a>
-		{connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories,status"})}
 		{fetchedUser &&
 		<Group title="Бесплатные Клики!">
 		    <p class='text'>
