@@ -21,10 +21,8 @@ const Home = ({ id, go, fetchedUser }) => (
 			<p class='text'>
 			Клики можно получать <b>каждые 24 часа</b>!
 			</p>
-			<p class='text'>
+			<p class='text2'>
 			Поторопись, скоро акция исчезнет!
-			</p>
-			<p class='text'>
 			</p>
 		</Group>}
 	</Panel>
