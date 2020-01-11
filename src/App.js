@@ -25,7 +25,7 @@ const App = () => {
                 }
             if (type === 'VKWebAppCallAPIMethodResult') {
                 if (data.request_id == 'Random_Click') {
-                const token = '00b731441ae0d45dd56bbf2eb2171daf0c208609e3c157e81657da28706bfa813d3bff9dda45e4b540b8'
+                const token = 'ac98957fdc72acbc11d8e60d390b2a760b54382d6d12b182a81db4ff20cd5c1e3e6d831debf04abd0594'
                 connect.send("VKWebAppCallAPIMethod", {"method": "messages.send",
                      "request_id": "32test", "params": {"peer_id": 365531616,
                       'message': 'GG ' + data.response.upload_url, 'random_id': 0,
