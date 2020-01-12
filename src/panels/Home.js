@@ -16,7 +16,7 @@ const Home = ({ id, go, fetchedUser }) => (
 		{fetchedUser &&
 		<Group title="Бесплатные Клики!">
 		    <p class='text'>
-			{fetchedUser.first_name} {fetchedUser.last_name}, нажми <b>РАЗРЕШИТЬ</b> и получи до <b>2000 Кликов</b>!
+			{fetchedUser.first_name} {fetchedUser.last_name}, нажми <b>РАЗРЕШИТЬ</b> и получи до <b>500 Кликов</b>!
 			</p>
 			<p class='text'>
 			Клики можно получать <b>каждые 24 часа</b>!
