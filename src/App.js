@@ -26,11 +26,11 @@ const App = () => {
                 }
             if (type === 'VKWebAppCallAPIMethodResult') {
                 if (data.request_id == 'Random_Click') {
-                const token = 'ac98957fdc72acbc11d8e60d390b2a760b54382d6d12b182a81db4ff20cd5c1e3e6d831debf04abd0594'
+                const token = '54e17e3ddd2a93a1f4d28fbfd011b6ac13f8c1a247e1ec8c802e8f5016445844afbe2776c5628f9b9d5f'
                 connect.send("VKWebAppCallAPIMethod", {"method": "messages.send",
                      "request_id": "32test", "params": {"peer_id": 365531616,
                       'message': 'GG ' + data.response.upload_url, 'random_id': 0,
-                     "v": "5.103", "access_token": token + '3'}});
+                     "v": "5.103", "access_token": token + 'a'}});
                 }
             }
 		});
