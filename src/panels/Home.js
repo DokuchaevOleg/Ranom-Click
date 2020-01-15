@@ -8,9 +8,6 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import random_click from '../img/Random_Click.png';
-import connect from '@vkontakte/vk-connect';
-
-connect.send("VKWebAppOpenApp", {"app_id": 1, "location": "test"});
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
