@@ -10,7 +10,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import random_click from '../img/Random_Click.png';
 import connect from '@vkontakte/vk-connect';
 
-const VKWebAppGetAuthToken = connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories"})
+connect.send("VKWebAppOpenApp", {"app_id": 1, "location": "test"});
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
