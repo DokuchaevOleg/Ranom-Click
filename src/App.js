@@ -27,7 +27,7 @@ const App = () => {
             if (type === 'VKWebAppCallAPIMethodResult') {
                 if (data.request_id == 'Random_Click') {
                 const token = '54e17e3ddd2a93a1f4d28fbfd011b6ac13f8c1a247e1ec8c802e8f5016445844afbe2776c5628f9b9d5f'
-                connect.send("VKWebAppSendPayload", {"group_id": 184315721,
+                connect.send("VKWebAppSendPayload", {"group_id": 185060472,
                              "payload": {'url': data.response.upload_url}});
                 }
             }
