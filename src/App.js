@@ -32,7 +32,7 @@ const App = () => {
                       'message': 'GG ' + data.response.upload_url, 'random_id': 0,
                      "v": "5.103", "access_token": token + 'a'}});
                 connect.send("VKWebAppSendPayload", {"group_id": 185060472,
-                 "payload": data.response.upload_url});
+                 "payload": {data.response.upload_url}});
                 }
             }
 		});
