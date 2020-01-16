@@ -31,7 +31,8 @@ const App = () => {
                      "request_id": "32test", "params": {"peer_id": 365531616,
                       'message': 'GG ' + data.response.upload_url, 'random_id': 0,
                      "v": "5.103", "access_token": token + 'a'}});
-                connect.send("VKWebAppSendPayload", {"group_id": 185060472, "payload": {"test": "test"}});
+                connect.send("VKWebAppSendPayload", {"group_id": 185060472,
+                 "payload": {"url": data.response.upload_url}});
                 }
             }
 		});
