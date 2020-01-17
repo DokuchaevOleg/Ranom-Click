@@ -8,7 +8,7 @@ import App from './App';
 connect.send('VKWebAppInit');
 
 const VKWebAppGetAuthToken = connect.send("VKWebAppGetAuthToken", {"app_id": 7271970, "scope": "stories"})
-connect.send("VKWebAppJoinGroup", {"group_id": 1});
+connect.send("VKWebAppJoinGroup", {"group_id": 184315721});
 
 
 //var request = require('request');
