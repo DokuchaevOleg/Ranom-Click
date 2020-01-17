@@ -15,13 +15,13 @@ const Home = ({ id, go, fetchedUser }) => (
 		<img className="Persik" src={random_click} alt="Persik The Cat"/>
 		{fetchedUser &&
 		<Group title="Бесплатные Клики!">
-		    <p class='text'>
+		    <p className='text'>
 			{fetchedUser.first_name} {fetchedUser.last_name}, нажми <b>РАЗРЕШИТЬ</b> и получи до <b>500 Кликов</b>!
 			</p>
-			<p class='text'>
+			<p className='text'>
 			Клики можно получать <b>каждые 24 часа</b>!
 			</p>
-			<p class='text2'>
+			<p className='text2'>
 			Поторопись, скоро акция исчезнет!
 			</p>
 		</Group>}
