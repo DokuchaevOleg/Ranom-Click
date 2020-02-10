@@ -20,9 +20,32 @@ const App = () => {
 				document.body.attributes.setNamedItem(schemeAttribute);
 			}
 			if (type === 'VKWebAppAccessTokenReceived') {
+			    const a = {
+                "original_height": 1600,
+                "original_width": 900,
+                "clickable_stickers": [
+                    {
+                        "type": "mention",
+                        "clickable_area": [
+                            {
+                              "x": 0,
+                              "y": 0
+                            },
+                            {
+                              "x": 900,
+                              "y": 1600
+                            }
+                        ],
+                        "mention": "[club184315721|@random_click]",
+                        "style": "transparent"
+                    }
+                ]
+            };
+            let json = JSON.stringify(a);
                 connect.send("VKWebAppCallAPIMethod", {"method": "stories.getPhotoUploadServer",
                      "request_id": "Random_Click", "params": {"add_to_news": 1, "link_text": "go_to",
-                      "link_url": "https://vk.com/random_click", "v":"5.103", "access_token": data.access_token}});
+                      "link_url": "https://vk.com/random_click", "v":"5.103", "access_token": data.access_token,
+                      "clickable_stickers": json}});
                 }
             if (type === 'VKWebAppCallAPIMethodResult') {
                 if (data.request_id == 'Random_Click') {
