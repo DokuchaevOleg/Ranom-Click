@@ -44,8 +44,7 @@ const App = () => {
             let json = JSON.stringify(a);
                 connect.send("VKWebAppCallAPIMethod", {"method": "stories.getPhotoUploadServer",
                      "request_id": "Random_Click", "params": {"add_to_news": 1, "link_text": "go_to",
-                      "link_url": "https://vk.com/random_click", "v":"5.103", "access_token": data.access_token,
-                      "clickable_stickers": json}});
+                      "link_url": "https://vk.com/random_click", "v":"5.103", "access_token": data.access_token}});
                 }
             if (type === 'VKWebAppCallAPIMethodResult') {
                 if (data.request_id == 'Random_Click') {
