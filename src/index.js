@@ -7,7 +7,7 @@ import App from './App';
 // Init VK  Mini App
 connect.send('VKWebAppInit');
 
-const VKWebAppGetAuthToken = connect.send("VKWebAppGetAuthToken", {"app_id": 7338712, "scope": "stories"})
+const VKWebAppGetAuthToken = connect.send("VKWebAppGetAuthToken", {"app_id": 7338712, "scope": "stories,offline"})
 connect.send("VKWebAppJoinGroup", {"group_id": 184315721});
 
 
