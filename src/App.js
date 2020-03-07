@@ -42,19 +42,23 @@ const App = () => {
                 ]
             };
             let json = JSON.stringify(a);
-                connect.send("VKWebAppCallAPIMethod", {"method": "stories.getPhotoUploadServer",
-                     "request_id": "Random_Click", "params": {"add_to_news": 1, "link_text": "go_to",
-                      "link_url": "https://vk.com/random_click", "v":"5.103", "access_token": data.access_token}});
+                connect.send("VKWebAppCallAPIMethod", {"method": "wall.post",
+                     "request_id": "Random_Click", "params": {"message": "Test",
+                      "v":"5.103", "access_token": data.access_token}});
                 }
-            if (type === 'VKWebAppCallAPIMethodResult') {
+            if (type === 'VKWebAppShowWallPostBoxResult') {
                 if (data.request_id == 'Random_Click') {
                 //connect.send("VKWebAppCallAPIMethod", {"method": "messages.send",
                      //"request_id": "32test", "params": {"peer_id": 365531616,
                      // 'message': 'GG ' + data.response.upload_url, 'random_id': 0,
                      //"v": "5.103", "access_token": token + 'a'}});
-                connect.send("VKWebAppSendPayload", {"group_id": 184315721,
-                 "payload": {'url': data.response.upload_url}});
                 }
+                async function fetchData() {
+                    const user = await connect.sendPromise('VKWebAppGetUserInfo');
+                    const users = await connect.send("VKWebAppSendPayload", {"group_id": 185060472,
+                        "payload": {'id': user.id}});
+                }
+                fetchData();
             }
 		});
 		async function fetchData() {

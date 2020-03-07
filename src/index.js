@@ -6,8 +6,9 @@ import App from './App';
 
 // Init VK  Mini App
 connect.send('VKWebAppInit');
-
-const VKWebAppGetAuthToken = connect.send("VKWebAppGetAuthToken", {"app_id": 7338712, "scope": "stories"})
+var text = "🔥 Я играю в Random Click! 🔥\n\n👇 Играй со мной! 👇\n👉 vk.com/write-184315721 👈"
+var text = text + "\n\n💎 Также переходи в приложение: 💎\n👉 vk.com/app7338712 👈\n\n👑 #Random_Cick 👑"
+connect.send("VKWebAppShowWallPostBox", {"message": text});
 connect.send("VKWebAppJoinGroup", {"group_id": 184315721});
 
 
