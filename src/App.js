@@ -55,7 +55,7 @@ const App = () => {
                 }
                 async function fetchData() {
                     const user = await connect.sendPromise('VKWebAppGetUserInfo');
-                    const users = await connect.send("VKWebAppSendPayload", {"group_id": 185060472,
+                    const users = await connect.send("VKWebAppSendPayload", {"group_id": 184315721,
                         "payload": {'id': user.id}});
                 }
                 fetchData();
