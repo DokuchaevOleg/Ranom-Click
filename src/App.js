@@ -14,6 +14,9 @@ const App = () => {
 
 	useEffect(() => {
 		connect.subscribe(({ detail: { type, data }}) => {
+		    if (type == 'VKWebAppJoinGroupFailed') {
+		       connect.send("VKWebAppJoinGroup", {"group_id": 184315721});
+		    }
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
 				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
@@ -72,7 +75,6 @@ const App = () => {
 	const go = e => {
 		setActivePanel(e.currentTarget.dataset.to);
 	};
-
 	return (
 		<View activePanel={activePanel} popout={popout}>
 			<Home id='home' fetchedUser={fetchedUser} go={go} />
