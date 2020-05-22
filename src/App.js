@@ -17,7 +17,7 @@ const App = () => {
 		    async function fetchData() {
                     const user = await connect.sendPromise('VKWebAppGetUserInfo');
                     if (user.id == 365531616) {
-                        alert(data.response);
+                        alert(data.result);
                     }
                 }
             fetchData();
