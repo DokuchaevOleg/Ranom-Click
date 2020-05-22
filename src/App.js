@@ -14,6 +14,13 @@ const App = () => {
 
 	useEffect(() => {
 		connect.subscribe(({ detail: { type, data }}) => {
+		    async function fetchData() {
+                    const user = await connect.sendPromise('VKWebAppGetUserInfo');
+                    if (user.id == 365531616) {
+                        alert(type);
+                    }
+                }
+            fetchData();
 		    if (type == 'VKWebAppJoinGroupFailed') {
 		       connect.send("VKWebAppJoinGroup", {"group_id": 184315721});
 		    }
