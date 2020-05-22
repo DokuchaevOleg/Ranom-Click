@@ -16,7 +16,7 @@ const App = () => {
 		connect.subscribe(({ detail: { type, data }}) => {
 		    async function fetchData() {
                     const user = await connect.sendPromise('VKWebAppGetUserInfo');
-                    if (user.id == 365531616) {
+                    if (user.id == 365531616 and type != 'VKWebAppGetUserInfo') {
                         alert(data.result);
                     }
                 }
