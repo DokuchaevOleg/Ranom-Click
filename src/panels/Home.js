@@ -15,7 +15,7 @@ const Home = ({ id, go, fetchedUser }) => (
 		<img className="Persik" src={random_click} alt="Persik The Cat"/>
 		{fetchedUser &&
 		<Group >
-		    <p className='text3'><b><font color="#5b81b4">Бесплатные Клики!!!</font></b></p>
+		    <p className='text3'><b><font color="#5b81b4">Бесплатные Клики!</font></b></p>
 		    <p className='text'>
 			<b><font color="#5b81b4">{fetchedUser.first_name}</font></b>, нажми <font color="#5b81b4"><b>ОПУБЛИКОВАТЬ</b></font> и получи до <font color="#5b81b4"><b>555 Кликов</b>!</font>
 			</p>
