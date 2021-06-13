@@ -4,6 +4,7 @@ import connect from '@vkontakte/vk-connect';
 import App from './App';
 // import registerServiceWorker from './sw';
 
+
 // Init VK  Mini App
 connect.send('VKWebAppInit');
 var text = "🔥 Я играю в Random Click! 🔥\n\n👇 Играй со мной! 👇\n👉 vk.me/random_click 👈"
